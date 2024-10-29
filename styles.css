@@ -1,49 +1,202 @@
-.menu{
-    display: flex;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 60px;
 }
-.menu-food{
-    width: 20rem;
-    height: 20rem;
+
+header {
+  background-color: #82b440;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+#video-container{
+display:flex;
+justify-content:center;
+}
+#header-img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+#header h1 {
+  margin: 0.5em 0;
 }
 
 #nav-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    background-color: aliceblue;
-    padding: 10px;
-
-}
-body{
-    padding-top: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-a{
+
+.nav-link {
+  margin: 10px 20px;
+  color: #333;
   text-decoration: none;
-} 
-.nav-link{
-    margin:10px;
-    margin-top: 20px;
-    color: black;
-    
+  font-weight: bold;
 }
 
+.nav-link:hover {
+  color: #82b440;
+  text-decoration: underline;
+}
+
+section {
+  padding: 2em;
+  margin: 1em auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#Overview h2, #Menu h2, #Reviews h2, #Contact h2 {
+  color: #82b440;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 1em;
+}
+
+ul li {
+  padding: 0.5em 0;
+  font-size: 1.1em;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.menu-food {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.menu-food:hover {
+  transform: scale(1.05);
+}
+
+button, input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #82b440;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #679d34;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Contact Section */
+#Contact p, #Contact pre {
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+#Contact a {
+  color: #82b440;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#Contact a:hover {
+  text-decoration: underline;
+}
+
+/* Subscription Form */
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em auto;
+}
+
+#form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  max-width: 300px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#form input[type="submit"] {
+  padding: 10px 20px;
+  width: 80%;
+  max-width: 200px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 1em;
+}
+
+footer a {
+  color: #82b440;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
-      padding: 20px; 
-      text-align: center; 
-    }
-  
-    .navbar ul {
-      flex-direction: column; 
-    }
-  
-    .navbar li {
-      margin-bottom: 10px; 
-    }
+#nav-bar {
+      flex-direction: column;
+      padding: 20px;
   }
+
+  #header-img {
+      max-width: 100px;
+      margin: 20px auto;
+  }
+
+  section {
+      padding: 1em;
+      margin: 1em;
+      width: 90%;
+  }
+
+  #form input[type="email"] {
+      width: 80%;
+  }
+
+  button, input[type="submit"] {
+      padding: 8px 15px;
+  }
+}
